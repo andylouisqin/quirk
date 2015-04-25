@@ -9,5 +9,10 @@ class RoomsController < ApplicationController
 
     def create
         @room = Room.new(room_params)
+        redirect_to @room
+    end
+
+    def show
+        @room = Room.find(params[:id])
     end
 end
