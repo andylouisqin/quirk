@@ -1,0 +1,8 @@
+<h1>List of rooms</h1>
+
+<a href="/new">Create a new room</a>
+
+<% @rooms.each do |r| %>
+    <p> <%= r.name %> </p> 
+    <p> <%= r.description %> </p>
+<% end %>
