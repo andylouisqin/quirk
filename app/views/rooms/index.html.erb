@@ -6,13 +6,14 @@
     <div class="room-list">
         <% @rooms.each do |r| %>
             <div class="room row">
-                <div class="id col-md-1"><%= r.id %></div>
+                <div class="id col-md-1 col-sm-1 col-xs-1"><%= r.id %></div>
 
-                <%= link_to room_path(r), :class => "link name col-md-3" do %>
+                <%= link_to room_path(r), :class => "link name col-md-3 col-sm-3 col-xs-11" do %>
                     <%= r.name %>
                 <% end %>
 
-                <div class="description col-md-8"><%= r.description %></div>
+                <div class="col-md-0 col-sm-0 col-xs-1"></div>
+                <div class="description col-md-8 col-sm-8 col-xs-11"><%= r.description %></div>
             </div>
             <hr>
         <% end %>
