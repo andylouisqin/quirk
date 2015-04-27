@@ -1,7 +1,7 @@
 <div class="container">
     <h1>All Rooms</h1>
 
-    <div class="room-list">
+    <div class="list-container">
         <% @rooms.each do |r| %>
             <%= link_to room_path(r), :class => "room row" do %>
                 <div class="id col-md-1 col-sm-1 col-xs-1"><%= r.id %></div>
