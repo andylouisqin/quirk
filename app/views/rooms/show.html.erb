@@ -1,8 +1,12 @@
 <div class="container">
     <a href="/rooms">Back to all rooms</a>
-    <%= button_to("Ask a question", :action => "new", :controller => "questions", :id => @room.id) %>
+    <%= button_to("Ask a question", :controller => "questions", :action => "new", :id => @room.id) %>
     <h1><%=  @room.name %></h1>
     <h3><%=  @room.description %></h3>
     <br>
+
+    <% @room.questions.each do |q| %>
+        <p><%= q.body %></p>
+    <% end %>
     <%=  link_to "Delete", room_path(@room), method: :delete %>
 </div>

@@ -5,10 +5,8 @@ Rails.application.routes.draw do
     # post "rooms", to: "rooms#create"
     root "rooms#index"
 
-    post "/questions/new", to "questions#new"
     resources :rooms
     resources :questions
 
-    # get "rooms/:id/new", to: "questions#new"
-    # post "rooms/:id/new", to: "questions#create"
+    # post "/questions/new", to: "questions#create"
 end
