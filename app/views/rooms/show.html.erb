@@ -1,5 +1,6 @@
 <div class="container">
-    <a href="/rooms">All rooms</a>
+    <a href="/rooms">Back to all rooms</a>
+    <%= button_to("Ask a question", :action => "new", :controller => "questions", :id => @room.id) %>
     <h1><%=  @room.name %></h1>
     <h3><%=  @room.description %></h3>
     <br>

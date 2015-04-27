@@ -4,7 +4,11 @@ Rails.application.routes.draw do
     # get "rooms/:id", to: "rooms#show", as: "room"
     # post "rooms", to: "rooms#create"
     root "rooms#index"
-    resources :rooms
 
-    # get "rooms/:id/ask", to: "questions#new"
+    post "/questions/new", to "questions#new"
+    resources :rooms
+    resources :questions
+
+    # get "rooms/:id/new", to: "questions#new"
+    # post "rooms/:id/new", to: "questions#create"
 end

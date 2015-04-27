@@ -2,5 +2,5 @@
 
 <%= form_for @question do |f| %>
     Ask here: <%= f.text_field :body %>
-    This question has <%= f.score %> points
+    <%= f.submit %>
 <% end %>
