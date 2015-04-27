@@ -2,4 +2,32 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+.container {
+    max-width: 1100px;
+    margin: 0 auto; 
+}
 
+.room-list {
+    margin: 40px 0;
+    .link {
+        display: block;
+        height: 100%;
+    }
+    .room {
+        margin: 10px 0;
+
+        .id {
+            width: 40px;
+        }
+        .name {
+            font-size: 20px;
+            margin-right: 20px;
+        }
+    }
+}
+
+.new-room {
+    .text-field-container {
+        margin: 20px 0;
+    }
+}

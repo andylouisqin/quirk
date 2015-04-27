@@ -1,10 +1,20 @@
-<h1>List of rooms</h1>
+<div class="container">
+    <h1>All Rooms</h1>
 
-<a href="/rooms/new">Create a new room</a>
+    <a href="/rooms/new">Create a new room</a>
 
-<% @rooms.each do |r| %>
-	<p> <%= r.id %> </p>
-    <p> <%= r.name %> </p> 
-    <p> <%= r.description %> </p>
-    <hr>
-<% end %>
+    <div class="room-list">
+        <% @rooms.each do |r| %>
+            <div class="room row">
+                <div class="id col-md-1"><%= r.id %></div>
+
+                <%= link_to room_path(r), :class => "link name col-md-3" do %>
+                    <%= r.name %>
+                <% end %>
+
+                <div class="description col-md-8"><%= r.description %></div>
+            </div>
+            <hr>
+        <% end %>
+    </div>
+</div>

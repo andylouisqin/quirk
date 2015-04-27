@@ -1,4 +1,7 @@
-<p>Name: <%=  @room.name %></p>
-<p>Description: <%=  @room.description %></p>
-<br>
-<%=  link_to "Delete", room_path(@room), method: :delete %>
+<div class="container">
+    <a href="/rooms">All rooms</a>
+    <h1><%=  @room.name %></h1>
+    <h3><%=  @room.description %></h3>
+    <br>
+    <%=  link_to "Delete", room_path(@room), method: :delete %>
+</div>

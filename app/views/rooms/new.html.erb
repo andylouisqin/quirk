@@ -1,11 +1,17 @@
-<h1>Create new room</h1>
+<div class="container new-room">
+    <h1>Create new room</h1>
 
-<% if flash[:error] %>
-	<p><%= flash[:error][0] %>!</p>
-<% end %>
+    <% if flash[:error] %>
+        <p><%= flash[:error][0] %>!</p>
+    <% end %>
 
-<%= form_for @room do |f| %>
-    Name: <%= f.text_field :name %>
-    Description: <%= f.text_field :description %>
-    <%= f.submit%>
-<% end %>
+    <%= form_for @room do |f| %>
+        <div class="text-field-container">Name: 
+            <div class="text-field"><%= f.text_field :name %></div>
+        </div>
+        <div class="text-field-container">Description: 
+            <div class="text-field"><%= f.text_field :description %></div>
+        </div>
+        <%= f.submit%>
+    <% end %>
+</div>
