@@ -1,0 +1,10 @@
+<h1>List of rooms</h1>
+
+<a href="/rooms/new">Create a new room</a>
+
+<% @rooms.each do |r| %>
+	<p> <%= r.id %> </p>
+    <p> <%= r.name %> </p> 
+    <p> <%= r.description %> </p>
+    <hr>
+<% end %>
