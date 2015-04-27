@@ -8,20 +8,38 @@
 }
 
 .room-list {
-    margin: 40px 0;
+    margin: 20px 0;
+    a {
+        color: inherit;
+    }
     .link {
         display: block;
         height: 100%;
     }
     .room {
-        margin: 10px 0;
+        display: block;
+        padding: 20px 30px;
+        opacity: 0.8;
 
         .id {
-            padding-top: 4px;
         }
         .name {
-            font-size: 20px;
+            font-size: 18px;
+            font-weight: 600;
         }
+    }
+
+    .room:hover {
+        background: #F5F5F5;
+    }
+
+    .new-room {
+        font-weight: 400;
+        opacity: 0.7;
+    }
+
+    hr {
+        margin: 0;
     }
 }
 

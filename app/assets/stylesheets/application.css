@@ -10,13 +10,48 @@
  * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
  * file per style scope.
  *
+ *= require bootstrap.min
  *= require_tree .
  *= require_self
- *= require bootstrap.min
  */
 
- @import url(http://fonts.googleapis.com/css?family=Lato:300,400,700);
+@import url(http://fonts.googleapis.com/css?family=Lato:300,400,700);
 
- body {
+body
+{
     font-family: Lato, sans-serif;
- }
+}
+
+.navbar {
+    height: 50px;
+    margin-bottom: 15px;
+
+    background: #f5f5f5;
+}
+
+
+
+.navbar .title {
+    font-size: 20px;
+    font-weight: 800;
+
+    position: relative;
+    top: 50%;
+    left: 50%;
+
+    display: inline-block;
+
+    transition: .2s;
+    -webkit-transform: translateY(-50%) translateX(-50%);
+       -moz-transform: translateY(-50%) translateX(-50%);
+        -ms-transform: translateY(-50%) translateX(-50%);
+    text-align: center;
+    text-decoration: none;
+
+    opacity: .7;
+    color: #555;
+}
+
+.title:hover {
+    opacity: 1;
+}

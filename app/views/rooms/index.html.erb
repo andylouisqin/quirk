@@ -1,21 +1,19 @@
 <div class="container">
     <h1>All Rooms</h1>
 
-    <a href="/rooms/new">Create a new room</a>
-
     <div class="room-list">
         <% @rooms.each do |r| %>
-            <div class="room row">
+            <%= link_to room_path(r), :class => "room row" do %>
                 <div class="id col-md-1 col-sm-1 col-xs-1"><%= r.id %></div>
+                <div class="name col-md-3 col-sm-3 col-xs-11"><%= r.name %></div>
 
-                <%= link_to room_path(r), :class => "link name col-md-3 col-sm-3 col-xs-11" do %>
-                    <%= r.name %>
-                <% end %>
-
-                <div class="col-md-0 col-sm-0 col-xs-1"></div>
                 <div class="description col-md-8 col-sm-8 col-xs-11"><%= r.description %></div>
-            </div>
+            <% end %>
             <hr>
         <% end %>
+        <a href="/rooms/new" class="room row new-room">
+            <div class="col-md-1"></div>
+            <div class="col-md-11">Create a new room</div>
+        </a>
     </div>
 </div>
