@@ -5,3 +5,9 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+# Make Rooms
+Room.create name: 'CS61A', description: 'Lecture 2 - Intro to Java'
+Room.create name: 'WDD', description: 'CSS Box Model'
+Room.create name: 'History 160', description: 'Civil War'
+Room.create name: 'Physics 8A', description: 'Conservation of energy'
