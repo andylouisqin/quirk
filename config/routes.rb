@@ -11,4 +11,13 @@ Rails.application.routes.draw do
     end
 
     resources :questions, only: [:create]
+
+    resources :questions do
+      member do
+        post 'upvote'
+        put :upvote
+      end
+    end
+
+    get "questions/:id/upvote", to: "questions#upvote"
 end

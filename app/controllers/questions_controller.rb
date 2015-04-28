@@ -10,8 +10,11 @@ class QuestionsController < ApplicationController
         redirect_to :back
     end
   
-    def vote
+    def upvote
+        @question = Question.find(params[:question_id])
     	@question.score += 1
+        @question.save
+        redirect_to :back
     end
   
     private

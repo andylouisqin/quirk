@@ -21,7 +21,11 @@
         <hr class="ask-hr">
         <% @room.questions.each do |q| %>
             <div class="question">
-                <p><span class="score"><%= q.score %></span><%= q.body %></p>
+                <p><span class="score">
+                    <%= link_to '+', :controller => "questions", :action => "upvote", :question_id => q.id, method: :post %>
+                    <%= q.score %></span>
+                    <%= q.body %>
+                </p>
             </div>
             <hr>
         <% end %>
