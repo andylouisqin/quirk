@@ -17,10 +17,18 @@
     <h1><%=  @room.name %></h1>
     <h3><%=  @room.description %></h3>
     <br>
+    <span id="room-description"><%=  @room.description %></span>
+    <br>
+    <div id="room-button"><%= button_to("Ask a question", :controller => "questions", :action => "new", :id => @room.id) %></div>
 
-    <% @room.questions.each do |q| %>
-        <p><%= q.body %></p>
-    <% end %>
+    <div class="list-container">
+        <% @room.questions.each do |q| %>
+            <div class="room row">
+                <p><%= q.body %></p>
+            </div>
+            <hr>
+        <% end %>
+    </div>
     <%=  link_to "Delete", room_path(@room), method: :delete %>
 
 </div>
