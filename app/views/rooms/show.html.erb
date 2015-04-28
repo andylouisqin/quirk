@@ -1,6 +1,19 @@
 <div class="container">
     <a href="/rooms">Back to all rooms</a>
-    <%= button_to("Ask a question", :controller => "questions", :action => "new", :id => @room.id) %>
+    
+    
+    <%= form_for @question do |q| %>
+    	<div><%= q.text_field :body %></div>
+    	<%= q.hidden_field :room_id %>
+    	<%= q.submit %>
+    <% end %>
+
+	<!-- <div>
+    <%= button_to "Ask a question", 
+    	:controller => "questions", :action => "new", 
+    	:room_id => @room.id %>
+    </div> -->
+
     <h1><%=  @room.name %></h1>
     <h3><%=  @room.description %></h3>
     <br>
@@ -9,4 +22,5 @@
         <p><%= q.body %></p>
     <% end %>
     <%=  link_to "Delete", room_path(@room), method: :delete %>
+
 </div>

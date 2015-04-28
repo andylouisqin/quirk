@@ -5,9 +5,8 @@ class QuestionsController < ApplicationController
 
   def create
     room_id = params[:id]
-    @question = Question.new(body:"", room_id:room_id, score:0)
-
-    @question.save
+    @question = Question.new(question_params)
+    puts @question.save
       # redirect to room
 
   end
@@ -19,6 +18,6 @@ class QuestionsController < ApplicationController
   private
       
   def question_params
-      params.require(:question).permit(:body)
+      params.require(:question).permit(:body, :room_id)
   end
 end
