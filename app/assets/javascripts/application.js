@@ -22,11 +22,13 @@ $(document).ready(function() {
             if ($('.text-field').val() == "") {
                 $('.submit-btn').removeClass('submit-btn-show');
                 setTimeout(function() {
+                    $('.submit-btn').css('display', 'none');
                     $('.list-container').removeClass('list-container-active');
-                }, 200);
+                }, 100);
             } else {
                 $('.list-container').addClass('list-container-active');
                 setTimeout(function() {
+                    $('.submit-btn').css('display', 'block');
                     $('.submit-btn').addClass('submit-btn-show');
                 }, 250);
             }
