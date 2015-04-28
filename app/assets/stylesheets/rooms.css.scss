@@ -68,8 +68,13 @@
         font-size: 15px;
         font-weight: 600;
         padding: 10px 30px;
+        position: relative;
         opacity: 0.7;
         margin: 0 auto;
+        .body {
+            position: relative;
+
+        }
     }
     .question:hover {
         background: #F5F5F5;
@@ -77,11 +82,16 @@
     }
 
     .score {
+        border: 1px solid transparent;
+        border-radius: 3px;
+        display: inline-block;
         margin-right: 20px;
+        padding: 10px;
         transition: 0.1s;
     }
 
     .score:hover {
+        border: 1px solid rgba(40, 148, 127, 0.5);
         color: #28947F;
     }
 
