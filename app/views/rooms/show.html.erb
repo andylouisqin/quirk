@@ -1,17 +1,31 @@
 <div class="container">
-    <span id="room-name"><%= @room.name %></span>
-    <span id="room-description"><%= @room.description %></span>
+    <a href="/rooms">Back to all rooms</a>
+    
+
+    <!-- <div>
+    <%= button_to "Ask a question", 
+        :controller => "questions", :action => "new", 
+        :room_id => @room.id %>
+    </div> -->
+
+    <h1><%=  @room.name %></h1>
+    <h3><%=  @room.description %></h3>
     <br>
 
+    <%= form_for @question, html: { autocomplete: 'off' } do |q| %>
+        <div><%= q.text_field :body, :placeholder => "Have a question? Ask here!", :class => "text-field" %></div>
+        <%= q.hidden_field :room_id %>
+        <%= q.submit "Ask Question", :class => "submit-btn"%>
+    <% end %>
     <div class="list-container">
-        <div class="row ask"><input placeholder="Question? Type here to ask..." type="text"></div>
         <hr class="ask-hr">
         <% @room.questions.each do |q| %>
-            <div class="question row">
-                <p><%= q.body %></p>
+            <div class="question">
+                <p><span class="score"><%= q.score %></span><%= q.body %></p>
             </div>
             <hr>
         <% end %>
     </div>
-    <%=  link_to "Delete room", room_path(@room), method: :delete %>
+    <%=  link_to "Delete", room_path(@room), method: :delete %>
+
 </div>

@@ -15,7 +15,7 @@ ActiveRecord::Schema.define(version: 20150427180813) do
 
   create_table "questions", force: true do |t|
     t.string   "body"
-    t.integer  "score"
+    t.integer  "score",      default: 0
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "room_id"
