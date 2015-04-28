@@ -22,8 +22,7 @@
         <% @room.questions.each do |q| %>
             <div class="question">
                 <p><span class="score">
-                    <%= link_to '+', :controller => "questions", :action => "upvote", :question_id => q.id, method: :post %>
-                    <%= q.score %></span>
+                    <%= link_to '+ ' + q.score.to_s, :controller => "questions", :action => "upvote", :question_id => q.id, method: :post %></span>
                     <%= q.body %>
                 </p>
             </div>

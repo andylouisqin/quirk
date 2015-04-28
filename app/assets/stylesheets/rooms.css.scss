@@ -78,6 +78,11 @@
 
     .score {
         margin-right: 20px;
+        transition: 0.1s;
+    }
+
+    .score:hover {
+        color: #28947F;
     }
 
     .ask {
