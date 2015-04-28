@@ -1,17 +1,17 @@
 <div class="container">
-    <span id="room-name"><%=  @room.name %></span>
+    <span id="room-name"><%= @room.name %></span>
+    <span id="room-description"><%= @room.description %></span>
     <br>
-    <span id="room-description"><%=  @room.description %></span>
-    <br>
-    <div id="room-button"><%= button_to("Ask a question", :controller => "questions", :action => "new", :id => @room.id) %></div>
 
     <div class="list-container">
+        <div class="row ask"><input placeholder="Question? Type here to ask..." type="text"></div>
+        <hr class="ask-hr">
         <% @room.questions.each do |q| %>
-            <div class="room row">
+            <div class="question row">
                 <p><%= q.body %></p>
             </div>
             <hr>
         <% end %>
     </div>
-    <%=  link_to "Delete", room_path(@room), method: :delete %>
+    <%=  link_to "Delete room", room_path(@room), method: :delete %>
 </div>
