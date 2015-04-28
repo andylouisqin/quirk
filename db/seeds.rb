@@ -7,7 +7,7 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 # Make Rooms
-Room.create name: 'CS61A', description: 'Lecture 2 - Intro to Java'
+Room.create name: 'CS61B', description: 'Lecture 2 - Intro to Java'
 Room.create name: 'WDD', description: 'CSS Box Model'
 Room.create name: 'History 160', description: 'Civil War'
 Room.create name: 'Physics 8A', description: 'Conservation of energy'
@@ -20,3 +20,4 @@ Question.create body: 'how do u java? halp plz :(', room_id: 1
 Question.create body: "how do you submit via github?", room_id: 2
 Question.create body: "what's the difference between position and display?", room_id: 2
 Question.create body: "Why is shawn's hair gold?", room_id: 2
+Question.create body: "How come when I type transition: 0.2; it doesn't work?", room_id: 2

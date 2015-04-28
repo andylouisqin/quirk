@@ -23,6 +23,7 @@ body
 }
 
 .navbar {
+    background: #555;
     height: 60px;
     margin-bottom: 15px;
     border-bottom: 1px solid #EEE;
@@ -47,8 +48,8 @@ body
     text-align: center;
     text-decoration: none;
 
-    opacity: .7;
-    color: #555;
+    opacity: .8;
+    color: white;
 }
 
 .title:hover {

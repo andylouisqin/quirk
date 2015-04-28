@@ -1,15 +1,8 @@
 <div class="container">
-    <a href="/rooms">Back to all rooms</a>
-    
-
-    <!-- <div>
-    <%= button_to "Ask a question", 
-        :controller => "questions", :action => "new", 
-        :room_id => @room.id %>
-    </div> -->
-
-    <h1><%= @room.name %></h1>
-    <h3><%= @room.description %></h3>
+    <div class="title">
+        <h1 id="room-name"><%= @room.name %></h1>
+        <h3 id="room-description"><%= @room.description %></h3>
+    </div>
     <br>
 
     <%= form_for @question, html: { autocomplete: 'off' } do |q| %>
@@ -29,6 +22,6 @@
             <hr>
         <% end %>
     </div>
-    <%=  link_to "Delete", room_path(@room), method: :delete %>
+    <%=  link_to "Delete room", room_path(@room), method: :delete %>
 
 </div>

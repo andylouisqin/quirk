@@ -6,8 +6,13 @@
     max-width: 1100px;
     margin: 0 auto;
 
+    .title {
+        text-align: center;
+    }
     h1 {
-        font-weight: 400;
+        font-size: 24px;
+        font-weight: 600;
+        margin-bottom: 5px;
     }
 
     #room-name {
@@ -16,6 +21,7 @@
     }
     #room-description {
         font-weight: 400;
+        margin: 0;
     }
 
     #room-button {
@@ -82,8 +88,6 @@
     }
 
     .score {
-        border: 1px solid transparent;
-        border-radius: 3px;
         display: inline-block;
         margin-right: 20px;
         padding: 10px;
@@ -91,7 +95,6 @@
     }
 
     .score:hover {
-        border: 1px solid rgba(40, 148, 127, 0.5);
         color: #28947F;
     }
 
@@ -117,7 +120,7 @@
     border: none;
     font-size: 22px;
     font-weight: 200;
-    padding: 20px 30px;
+    padding: 10px 30px;
     width: 100%;
 }
 
