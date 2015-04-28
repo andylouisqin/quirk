@@ -24,7 +24,8 @@
 }
 
 .list-container {
-    margin-top: 40px;
+    margin: 20px;
+    transition: 0.2s;
     a {
         color: inherit;
         text-decoration: none;
@@ -93,6 +94,10 @@
     }
 }
 
+.list-container-active {
+    margin-top: 40px;
+}
+
 .text-field {
     border: none;
     font-size: 18px;
@@ -109,12 +114,16 @@
 .submit-btn {
     background: none;
     border: none;
+    display: none;
     color: #39B19A;
     font-size: 16px;
     font-weight: 600;
     float: right;
+    margin-right: 20px;
 }
-
+.submit-btn-show {
+    display: block;
+}
 .new-room {
     .text-field-container {
         margin: 20px 0;

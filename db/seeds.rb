@@ -16,3 +16,7 @@ Question.create body: 'What is the definite integral of x?', room_id: 1
 Question.create body: 'Why does professor hug have so many dogspotting links in his chrome?', room_id: 1
 Question.create body: 'When professor hug says that nested for loops only sometimes runs in n^2 time, what does he mean? i thought this usually always happens?', room_id: 1
 Question.create body: 'how do u java? halp plz :(', room_id: 1
+
+Question.create body: "how do you submit via github?", room_id: 2
+Question.create body: "what's the difference between position and display?", room_id: 2
+Question.create body: "Why is shawn's hair gold?", room_id: 2
