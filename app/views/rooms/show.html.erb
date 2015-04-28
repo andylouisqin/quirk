@@ -1,8 +1,9 @@
 <div class="container">
-    <span><%=  @room.name %></span>
-    <span><%=  @room.description %></span>
+    <span id="room-name"><%=  @room.name %></span>
     <br>
-    <%= button_to("Ask a question", :controller => "questions", :action => "new", :id => @room.id) %>
+    <span id="room-description"><%=  @room.description %></span>
+    <br>
+    <div id="room-button"><%= button_to("Ask a question", :controller => "questions", :action => "new", :id => @room.id) %></div>
 
     <div class="list-container">
         <% @room.questions.each do |q| %>
