@@ -183,10 +183,19 @@
 }
 
 @media (max-width: 400px) {
+    .text-field {
+        font-size: 18px;
+    }
+    .submit-btn {
+        font-size: 13px;
+    }
     .list-container {
         margin: 20px auto;
         .question {
             padding: 10px;
         }
+    }
+    .list-container-active {
+        margin-top: 40px;
     }
 }
