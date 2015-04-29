@@ -12,7 +12,7 @@ class RoomsController < ApplicationController
         @room = Room.new(room_params)
 
         if @room.save
-            redirect_to @room # WHAT TO DO
+            redirect_to @room
         else
             flash[:error] = @room.errors.full_messages
             render "new"
