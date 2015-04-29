@@ -33,7 +33,7 @@ body
 
 
 .navbar .title {
-    color: #111;
+    color: #39B19A;
     font-size: 20px;
     font-weight: 800;
 
@@ -44,7 +44,7 @@ body
     transition: .2s;
     text-decoration: none;
 
-    opacity: .6;
+    opacity: .8;
 }
 
 .title:hover {
