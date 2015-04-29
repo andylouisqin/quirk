@@ -23,8 +23,8 @@ body
 }
 
 .navbar {
-    background: #555;
-    height: 60px;
+    background: white;
+    padding: 13px 0 13px 120px;
     margin-bottom: 15px;
     border-bottom: 1px solid #EEE;
 }
@@ -32,24 +32,19 @@ body
 
 
 .navbar .title {
+    color: #111;
     font-size: 20px;
     font-weight: 800;
 
     position: relative;
-    top: 50%;
-    left: 50%;
 
     display: inline-block;
 
     transition: .2s;
-    -webkit-transform: translateY(-50%) translateX(-50%);
-       -moz-transform: translateY(-50%) translateX(-50%);
-        -ms-transform: translateY(-50%) translateX(-50%);
     text-align: center;
     text-decoration: none;
 
     opacity: .8;
-    color: white;
 }
 
 .title:hover {

@@ -119,9 +119,10 @@
 
     .score {
         display: inline-block;
-        margin-right: 20px;
         padding: 10px;
         transition: 0.1s;
+        text-align: left;
+        width: 70px;
     }
 
     .score:hover {
