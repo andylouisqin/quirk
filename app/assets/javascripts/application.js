@@ -17,6 +17,16 @@
 //= require_tree .
 
 $(document).ready(function() {
+    $('.indicator, #room-description').hover(function() {
+        if ($('.indicator').hasClass('indicator-live')) {
+            $('.indicator-status').text("Live");
+        } else {
+            $('.indicator-status').text("Not live");
+        }
+    }, function() {
+        $('.indicator-status').text("");
+    })
+
     $('.text-field').keyup(function() {
         setTimeout(function() {
             if ($('.text-field').val() == "") {

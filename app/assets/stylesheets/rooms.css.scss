@@ -7,12 +7,17 @@
     margin: 0 auto;
 
     .title {
+        position: relative;
         text-align: center;
     }
     h1 {
         font-size: 24px;
         font-weight: 600;
         margin-bottom: 5px;
+    }
+    h3 {
+        display: inline-block;
+        position: relative;
     }
 
     #room-name {
@@ -26,6 +31,31 @@
 
     #room-button {
         margin-top: 50px;
+    }
+
+    .status {
+        display: inline-block;
+        position: relative;
+    }
+
+    .indicator {
+        display: inline-block;
+        margin-left: 6px;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+    }
+    .indicator-live {
+        background: #39B19A;
+    }
+
+    .indicator-status {
+        color: #39B19A;
+        position: absolute;
+        top: 1px;
+        left: 25px;
+        display: inline-block;
+        font-size: 12px;
     }
 }
 
