@@ -24,9 +24,10 @@ body
 
 .navbar {
     background: white;
-    padding: 13px 0 13px 120px;
+    padding: 13px 0;
     margin-bottom: 15px;
     border-bottom: 1px solid #EEE;
+    text-align: center;
 }
 
 
@@ -41,10 +42,9 @@ body
     display: inline-block;
 
     transition: .2s;
-    text-align: center;
     text-decoration: none;
 
-    opacity: .8;
+    opacity: .6;
 }
 
 .title:hover {

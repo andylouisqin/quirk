@@ -181,3 +181,12 @@
         margin: 20px 0;
     }
 }
+
+@media (max-width: 400px) {
+    .list-container {
+        margin: 20px auto;
+        .question {
+            padding: 10px;
+        }
+    }
+}
