@@ -6,8 +6,6 @@ class RoomsController < ApplicationController
     def show
         @room = Room.find(params[:id])
         @question = @room.questions.build
-        puts 5
-        puts @question.room_id
     end
 
     def create

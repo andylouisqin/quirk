@@ -1,3 +1,4 @@
 class Question < ActiveRecord::Base
-  belongs_to :room
+    default_scope {order('-score')}
+    belongs_to :room
 end

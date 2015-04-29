@@ -1,5 +1,5 @@
 <div class="container">
-    <div class="title"><h1>All Rooms</h1></div>
+    <div class="title"><h1>Rooms near you</h1></div>
 
     <div class="list-container">
         <% @rooms.each do |r| %>
@@ -12,7 +12,6 @@
             <hr>
         <% end %>
         <a href="/rooms/new" class="room row new-room">
-            <div class="col-md-1"></div>
             <div class="col-md-12">Create a new room</div>
         </a>
     </div>
